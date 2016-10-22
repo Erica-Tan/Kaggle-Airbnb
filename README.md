@@ -9,4 +9,4 @@ https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings
 
 Required Libraries
 
-ggplot2, plyr, dplyr
+ggplot2, dplyr
