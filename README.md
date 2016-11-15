@@ -3,8 +3,8 @@
 Please download the data sets from the [Kaggle competition page](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings).
 
 1. data_cleaning.R - Convert the format of data. Remove outliers
-2. format_session.R - Format the sessions dataset
-3. train_session.R - Merges train dataset with sessions. Cteate two datasets (binary classification dataset and final dataset)
+2. format_session.R - Reshape sessions dataset
+3. train_session.R - Merge train dataset with sessions. Cteate two datasets (binary classification dataset and final dataset)
 
 ###Required Libraries
 ggplot2, dplyr,data.table
