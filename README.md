@@ -2,8 +2,8 @@
 
 Please download the data sets from the [Kaggle competition page](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings).
 
-1. data_cleaning.R - Convert the format of data. Remove outliers. Merge with sessions dataset
-2. format_session.R - Reshape sessions dataset
+1. Airbnb_data_cleaning.R - Convert the format of data. Remove outliers. Merge with sessions dataset
+2. Airbnb_session.R - Reshape sessions dataset
 
 ###Required Libraries
 dplyr,data.table
