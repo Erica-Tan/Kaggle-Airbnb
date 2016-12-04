@@ -4,6 +4,8 @@ Please download the data sets from the [Kaggle competition page](https://www.kag
 
 1. Airbnb_data_cleaning.R - Convert the format of data. Remove outliers. Merge with sessions dataset
 2. Airbnb_session.R - Reshape sessions dataset
+3. Airbnb_regression.R - Logistic regression
+4. Airbnb_xgboost.R
 
 ###Required Libraries
 dplyr,data.table
