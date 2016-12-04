@@ -8,7 +8,7 @@ Please download the data sets from the [Kaggle competition page](https://www.kag
 4. Airbnb_xgboost.R
 
 ###Required Libraries
-dplyr,data.table
+dplyr,data.table, caret, ROCR, xgboost
 
 Here is a link to my [Kaggle Kernel] (https://www.kaggle.com/erica12/airbnb-recruiting-new-user-bookings/airbnb-data-exploration)
 
