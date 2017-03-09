@@ -1,6 +1,6 @@
----
-title: "Airbnb New User Bookings"
----
+
+# Airbnb New User Bookings
+
 
 ## Data Exploration
 
@@ -10,26 +10,6 @@ title: "Airbnb New User Bookings"
 ```r
 library(ggplot2)
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 train_data <- read.csv("data/train_users_2.csv")
 ```
 
