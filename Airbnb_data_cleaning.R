@@ -53,9 +53,9 @@ combi$date_first_booking <- NULL
 
 #load session datasets
 #These three datasets are created at Airbnb_session.R file
-sessions_action_type <- read.csv("Session/sessions_action_type_dcast.csv")
-sessions_action_detail <- read.csv("Session/sessions_action_detail_dcast.csv")
-sessions_action <- read.csv("Session/sessions_action_dcast2.csv")
+sessions_action_type <- read.csv("processed/sessions_action_type_dcast.csv")
+sessions_action_detail <- read.csv("processed/sessions_action_detail_dcast.csv")
+sessions_action <- read.csv("processed/sessions_action_dcast2.csv")
 
 results <- combi$country_destination
 
@@ -105,7 +105,7 @@ combi3$country_destination <- NULL
 combi3$country_destination <- targets
 
 
-write.csv(combi3, file = "data/Airbnb.csv", row.names = FALSE)
+write.csv(combi3, file = "processed/Airbnb.csv", row.names = FALSE)
 
 
 train <- combi3[1:213451,]
@@ -114,7 +114,7 @@ test <- combi3[213452:275547,]
 
 
 #save final dataset
-write.csv(train, file = "data/Airbnb_train.csv", row.names = FALSE)
+write.csv(train, file = "processed/Airbnb_train.csv", row.names = FALSE)
 test$country_destination <- NULL
-write.csv(test, file = "data/Airbnb_test.csv", row.names = FALSE)
+write.csv(test, file = "processed/Airbnb_test.csv", row.names = FALSE)
 

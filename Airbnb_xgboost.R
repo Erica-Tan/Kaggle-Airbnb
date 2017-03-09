@@ -1,7 +1,7 @@
-train <- read.csv("data/Airbnb_train.csv")
-test <- read.csv("data/Airbnb_test.csv")
-train_lr <- read.csv("data/train_lr.csv")
-test_lr <- read.csv("data/test_lr.csv")
+train <- read.csv("processed/Airbnb_train.csv")
+test <- read.csv("processed/Airbnb_test.csv")
+train_lr <- read.csv("processed/train_lr.csv")
+test_lr <- read.csv("processed/test_lr.csv")
 
 indx <- sapply(train, is.integer)
 train[indx] <- lapply(train[indx], function(x) as.numeric(x))
@@ -59,5 +59,5 @@ submission <- as.data.frame(submission)
 
 
 # saving submission
-write.csv(submission, "submit.csv", row.names=F)
+write.csv(submission, "processed/submit.csv", row.names=F)
 

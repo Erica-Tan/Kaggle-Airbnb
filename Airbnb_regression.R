@@ -37,7 +37,7 @@ auc
 
 
 train_lr <- data.frame(id = train$id, pred_lr = prediction)
-write.csv(train_lr, file = "train_lr.csv", row.names = FALSE)
+write.csv(train_lr, file = "processed/train_lr.csv", row.names = FALSE)
 
 
 
@@ -47,6 +47,6 @@ prediction <- ifelse(pred_lr > 0.5,1,0)
 
 
 test_lr <- data.frame(id = test$id, pred_lr = prediction)
-write.csv(test_lr, file = "test_lr.csv", row.names = FALSE)
+write.csv(test_lr, file = "processed/test_lr.csv", row.names = FALSE)
 
 

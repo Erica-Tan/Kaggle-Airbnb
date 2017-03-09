@@ -13,9 +13,9 @@ sessions$count <- 1
 
 length(c(as.character(unique(X_train$id)), as.character(unique(X_test$id))))
 
-write.csv(sessions, file = "Session/X_sessions.csv", row.names = FALSE)
+write.csv(sessions, file = "processed/X_sessions.csv", row.names = FALSE)
 
-sessions <- read.csv("Session/X_sessions.csv", stringsAsFactors = FALSE)
+sessions <- read.csv("processed/X_sessions.csv", stringsAsFactors = FALSE)
 
 #handle outliers
 action_types <- unique(sessions$action_type)
@@ -43,13 +43,13 @@ sessions_action <- subset(sessions_action, action %in% actions)
 sessions_action_detail <- select(sessions, id, action_detail, count)
 sessions_action_detail <- subset(sessions_action_detail, action_detail %in% action_details)
 
-write.csv(sessions_action_type, file = "Session/sessions_action_type.csv", row.names = FALSE)
-write.csv(sessions_action, file = "Session/sessions_action.csv", row.names = FALSE)
-write.csv(sessions_action_detail, file = "Session/sessions_action_detail.csv", row.names = FALSE)
+write.csv(sessions_action_type, file = "processed/sessions_action_type.csv", row.names = FALSE)
+write.csv(sessions_action, file = "processed/sessions_action.csv", row.names = FALSE)
+write.csv(sessions_action_detail, file = "processed/sessions_action_detail.csv", row.names = FALSE)
 
-sessions_action_type <- read.csv("Session/sessions_action_type.csv")
-sessions_action <- read.csv("Session/sessions_action.csv")
-sessions_action_detail <- read.csv("Session/sessions_action_detail.csv")
+sessions_action_type <- read.csv("processed/sessions_action_type.csv")
+sessions_action <- read.csv("processed/sessions_action.csv")
+sessions_action_detail <- read.csv("processed/sessions_action_detail.csv")
 
 # reshape data
 sessions_action_type <- dcast(sessions_action_type, id ~ action_type, mean, value.var="count")
@@ -60,7 +60,7 @@ sessions_action_type[is.na(sessions_action_type)] <- 0
 sessions_action[is.na(sessions_action)] <- 0
 sessions_action_detail[is.na(sessions_action_detail)] <- 0
 
-write.csv(sessions_action_type, file = "Session/sessions_action_type_dcast.csv", row.names = FALSE)
-write.csv(sessions_action, file = "Session/sessions_action_dcast.csv", row.names = FALSE)
-write.csv(sessions_action_detail, file = "Session/sessions_action_detail_dcast.csv", row.names = FALSE)
+write.csv(sessions_action_type, file = "processed/sessions_action_type_dcast.csv", row.names = FALSE)
+write.csv(sessions_action, file = "processed/sessions_action_dcast.csv", row.names = FALSE)
+write.csv(sessions_action_detail, file = "processed/sessions_action_detail_dcast.csv", row.names = FALSE)
 
